@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.wifidevices.controllers.DeviceList">
+<VBox>
+    <Label>Device List</Label>
+    <HBox>
+    <Button text="Return to Main Menu" onAction="#onMain"/>
+    </HBox>
+    <TableView fx:id="tableID">
+        <columns>
+            <TableColumn text = "Device Number" fx:id="id">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Device Name" fx:id="name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "MAC Address" fx:id="mac">
+                <cellValueFactory>
+                    <PropertyValueFactory property="mac"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Location" fx:id="loc">
+                <cellValueFactory>
+                    <PropertyValueFactory property="location"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Date" fx:id="date" prefWidth="190">
+                <cellValueFactory>
+                    <PropertyValueFactory property="date"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>
+</AnchorPane>

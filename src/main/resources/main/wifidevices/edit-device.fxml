@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.wifidevices.controllers.EditDevice"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox>
+        <HBox>
+            <Label text="Device ID to Edit" translateY="3"/>
+            <TextField promptText="Device ID" fx:id="editID"/>
+        </HBox>
+        <TextField promptText="Device Name" fx:id="nameField"/>
+        <TextField promptText="MAC Address" fx:id="macField"/>
+        <TextField promptText="Location" fx:id="locationField"/>
+
+        <HBox>
+            <Button text="Edit" onAction="#onEdit"/>
+            <Button text="Return To Main Menu" onAction="#onMenu"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
